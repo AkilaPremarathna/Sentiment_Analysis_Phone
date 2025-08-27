@@ -1,157 +1,108 @@
-Sentiment Analyzer
+🎭 #Sentiment Analyzer
 
-A web-based application built with Streamlit to analyze the sentiment of user-provided text using a Random Forest Machine Learning model. The app features a sleek black and green aesthetic, enhanced font sizes, and an optimized layout for better usability. It predicts whether the sentiment is Positive or Negative and provides confidence scores.
+A Streamlit-based web application that analyzes the sentiment of user-provided text (reviews, comments, feedback, etc.) using a Random Forest Machine Learning model and TF-IDF vectorizer.
 
-Features
+The app provides real-time predictions with a confidence score, beautiful UI, and interactive visualization of sentiment probabilities.
 
+🚀 Features
 
+🌑 Dark Black + Light Green Themed UI
 
+📝 Text Input Area – Enter any text for analysis
 
+🔍 Sentiment Prediction – Detects Positive or Negative sentiment
 
-Sentiment Analysis: Analyze text input (reviews, comments, etc.) using a pre-trained Random Forest model.
+📊 Confidence Bar & Probabilities – Shows prediction confidence visually
 
+📈 Detailed Analysis (Expandable) – View probability distribution in a bar chart
 
+💡 Example Inputs – Try sample positive and negative text snippets
 
-Confidence Visualization: Displays a confidence bar and probability scores for the prediction.
+⚡ Optimized with Model Caching for faster performance
 
+🛠️ Tech Stack
 
+Streamlit
+ – Frontend & UI
 
-Example Inputs: Includes pre-defined Positive and Negative examples for quick testing.
+Scikit-learn
+ – Machine Learning (Random Forest)
 
+Joblib
+ – Model serialization
 
+Pandas
+ & NumPy
+ – Data handling
 
-Responsive Design: Optimized UI with larger fonts and reduced blank spaces for an aesthetic experience.
+TF-IDF Vectorizer
+ – Text feature extraction
 
+📂 Project Structure
+📁 Sentiment-Analyzer
+│── Random_forest.joblib           # Trained Random Forest model
+│── tfidf_vectorizer.joblib        # Trained TF-IDF vectorizer
+│── app.py                         # Main Streamlit app
+│── requirements.txt               # Dependencies
+│── README.md                      # Project documentation
 
+⚙️ Installation & Setup
+1️⃣ Clone the Repository
+git clone https://github.com/your-username/Sentiment-Analyzer.git
+cd Sentiment-Analyzer
 
-Detailed Insights: Expandable section with a bar chart of probability scores.
-
-Requirements
-
-
-
-
-
-Python 3.8+
-
-
-
-Required Python packages (listed in requirements.txt):
-
-
-
-
-
-streamlit
-
-
-
-joblib
-
-
-
-numpy
-
-
-
-pandas
-
-
-
-scikit-learn
-
-Installation
-
-Prerequisites
-
-
-
-
-
-Install Python 3.8 or higher from python.org.
-
-
-
-Install Git from git-scm.com if you plan to use version control.
-
-Steps to Run Locally
-
-
-
-
-
-Clone the Repository
-
-
-
-
-
-Open a terminal and run:
-
-git clone https://github.com/yourusername/sentiment-analyzer.git
-cd sentiment-analyzer
-
-
-
-Install Dependencies
-
-
-
-
-
-Create a virtual environment (optional but recommended):
-
+2️⃣ Create Virtual Environment (Optional but Recommended)
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate   # For Linux/Mac
+venv\Scripts\activate      # For Windows
 
-
-
-Install required packages:
-
+3️⃣ Install Dependencies
 pip install -r requirements.txt
 
+4️⃣ Add Model Files
 
+Place the following files in the root directory:
 
-Prepare Model Files
+Random_forest.joblib
 
+tfidf_vectorizer.joblib
 
-
-
-
-Ensure the pre-trained model files (Random_forest.joblib and tfidf_vectorizer.joblib) are placed in the project directory. These files are required for the app to function and should be generated from your training pipeline.
-
-
-
-Run the App
-
-
-
-
-
-Start the Streamlit app:
-
+▶️ Run the Application
 streamlit run app.py
 
 
+Then, open your browser and go to:
+👉 http://localhost:8501
 
-Open your browser and navigate to http://localhost:8501 to use the app.
+📸 Screenshots
+Main UI
 
-Usage
+Sentiment Result Example
 
+🧪 Example Usage
+Input:
+I absolutely love this product! It's amazing and works perfectly.
 
+Output:
 
+Sentiment: Positive 😊
 
+Confidence: 95%
 
-Enter Text: Type or paste your text (e.g., a review or comment) into the text area.
+🛡️ Error Handling
 
+If model/vectorizer files are missing → ❌ Error message shown
 
+If empty text is entered → ⚠️ Warning to provide input
 
-Analyze: Click the "Analyze Sentiment" button to get the prediction.
+❤️ Acknowledgements
 
+Built with Streamlit
 
+Powered by Random Forest Algorithm
 
-View Results: The app displays the sentiment (Positive/Negative), confidence level, and an optional detailed analysis with probability scores.
+Inspired by real-world Sentiment Analysis use-cases
 
+📜 License
 
-
-Try Examples: Use the "Positive Example" or "Negative Example" buttons to test with pre-loaded text.
+This project is open-source and available under the MIT License.
